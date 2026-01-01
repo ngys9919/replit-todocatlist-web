@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Nunito:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Fredoka', sans-serif;
+  --font-body: 'Nunito', sans-serif;
+
+  /* Cat-themed modern palette - Soft Pastels & Pop Accents */
+  --background: 260 30% 98%;
+  --foreground: 260 20% 20%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 260 20% 20%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 260 20% 20%;
+
+  /* Playful Purple/Pink Primary */
+  --primary: 265 89% 66%;
+  --primary-foreground: 0 0% 100%;
+
+  /* Soft Lavender Secondary */
+  --secondary: 265 50% 96%;
+  --secondary-foreground: 265 89% 60%;
+
+  --muted: 260 20% 96%;
+  --muted-foreground: 260 10% 55%;
+
+  /* Coral Accent for fun moments */
+  --accent: 14 89% 66%;
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 260 20% 92%;
+  --input: 260 20% 92%;
+  --ring: 265 89% 66%;
+
+  --radius: 1rem;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+    background-image: 
+      radial-gradient(circle at 10% 20%, hsla(265, 89%, 66%, 0.03) 0%, transparent 20%),
+      radial-gradient(circle at 90% 80%, hsla(14, 89%, 66%, 0.03) 0%, transparent 20%);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply font-semibold tracking-tight;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: hsla(260, 10%, 80%, 0.5);
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsla(260, 10%, 70%, 0.8);
+}
